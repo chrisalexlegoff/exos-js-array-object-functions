@@ -1,18 +1,20 @@
 // Exercice 23 : Ajouter un champ "birthYear" basé sur l'âge
 const people = [
   { name: 'Alice', age: 30 },
-  { name: 'Bob', age: 17 },
+  { name: 'Bob', age: 20 },
   { name: 'Charlie', age: 35 },
-  { name: 'David', age: 16 },
+  { name: 'David', age: 25 },
   { name: 'Eve', age: 40 },
 ];
 
 // votre code ici .... //
 
 // résultat attendu :
-console.log(adults);
+console.log(updatedPeople);
 // [
-//   { name: "Alice", age: 30 },
-//   { name: "Charlie", age: 35 },
-//   { name: "Eve", age: 40 }
+//   { name: "Alice", age: 30, birthYear: 1994 },
+//   { name: "Bob", age: 20, birthYear: 2004 },
+//   { name: "Charlie", age: 35, birthYear: 1989 },
+//   { name: "David", age: 25, birthYear: 1999 },
+//   { name: "Eve", age: 40, birthYear: 1984 }
 // ]
