@@ -7,7 +7,27 @@ const people = [
   { name: 'Eve', age: 40 },
 ];
 
-// votre code ici .... //
+// Frédéric
+// const oldestPerson = people.reduce((year, testvalue) => {
+//   const { name, age } = testvalue;
+//   for (testvalue of people) {
+//     do {
+//       year.name = name;
+//       year.age = age;
+//     } while (age > year.age);
+//   }
+//   return year;
+// }, {});
+// initialisation objet vide
+
+// Adrien
+const oldestPerson = people.reduce((oldest, person) => {
+  if (person.age > oldest.age) {
+    return person;
+  } else {
+    return oldest;
+  }
+});
 
 // résultat attendu :
 console.log(oldestPerson); // { name: "Eve", age: 40 }

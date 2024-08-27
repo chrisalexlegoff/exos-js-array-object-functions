@@ -9,15 +9,14 @@ const people = [
 
 const currentYear = new Date().getFullYear();
 
-function addBirthYearField(tabPeople) {
-  return tabPeople.map((person) => ({ ...person, birthYear: currentYear - person.age }));
+function addBirthYearField(people) {
+  return people.map((person) => ({
+    ...person,
+    birthYear: currentYear - person.age,
+  }));
 }
 
 const updatedPeople = addBirthYearField(people);
-
-// console.log(currentYear);
-
-// résultat attendu :
 console.log(updatedPeople);
 // [
 //   { name: "Alice", age: 30, birthYear: 1994 },

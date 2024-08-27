@@ -7,24 +7,14 @@ const people = [
   { name: 'Eve', age: 40 },
 ];
 
-// Emile
-// const updatedPeople = people.map((person) => {
-//   person.isAdult = person.age >= 18;
-//   return person;
-// });
+function addIsAdultField(people) {
+  return people.map((person) => ({
+    ...person,
+    isAdult: person.age >= 18,
+  }));
+}
 
-// Adrien
-// const updatedPeople = people.map((personne) => {
-//   return { ...personne, isAdult: personne.age >= 18 };
-// });
-
-// Frédéric
-const updatedPeople = people.map((major) => ({
-  ...major,
-  isAdult: major.age >= 18,
-}));
-
-// résultat attendu :
+const updatedPeople = addIsAdultField(people);
 console.log(updatedPeople);
 // [
 //   { name: "Alice", age: 30, isAdult: true },

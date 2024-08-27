@@ -12,8 +12,6 @@ function removeMinors(people) {
 }
 
 const adults = removeMinors(people);
-
-// résultat attendu :
 console.log(adults);
 // [
 //   { name: "Alice", age: 30 },

@@ -1,4 +1,4 @@
-// Exercice 28 : Ajouter un champ "category" basé sur l'âge (child, adult, senior)
+// Exercice 28 : Ajouter un champ "category" basé sur l'âge (enfant, adulte, senior)
 const people = [
   { name: 'Alice', age: 10 },
   { name: 'Bob', age: 20 },
@@ -7,9 +7,14 @@ const people = [
   { name: 'Eve', age: 40 },
 ];
 
-// votre code ici .... //
+function addAgeCategory(people) {
+  return people.map((person) => ({
+    ...person,
+    category: person.age < 18 ? 'child' : person.age < 65 ? 'adult' : 'senior',
+  }));
+}
 
-// résultat attendu :
+const categorizedPeople = addAgeCategory(people);
 console.log(categorizedPeople);
 // [
 //   { name: "Alice", age: 10, category: "child" },
