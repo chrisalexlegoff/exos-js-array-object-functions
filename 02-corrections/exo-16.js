@@ -24,8 +24,6 @@ function findYoungestAndOldestInCity(people) {
 }
 
 const youngestAndOldest = findYoungestAndOldestInCity(people);
-
-// résultat attendu :
 console.log(youngestAndOldest);
 // {
 //   "New York": { youngest: { name: "David", age: 25 }, oldest: { name: "Alice", age: 30 } },

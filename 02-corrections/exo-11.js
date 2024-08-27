@@ -7,15 +7,14 @@ const people = [
   { name: 'Eve', age: 40 },
 ];
 
-// Frédéric
-const updatedPeople = people.map((update) => {
-  if (update.age < 30) {
-    return { ...update, name: `${update.name}_Jr` }; //! Modifie la propriété name selon condition.
-  }
-  return update; //! retourne les autres valeurs sinon undefined...
-});
+function addSuffixToNames(people, age, suffix) {
+  return people.map((person) => ({
+    ...person,
+    name: person.age < age ? person.name + suffix : person.name,
+  }));
+}
 
-// résultat attendu :
+const updatedPeople = addSuffixToNames(people, 30, '_Jr');
 console.log(updatedPeople);
 // [
 //   { name: "Alice", age: 30 },

@@ -7,7 +7,18 @@ const people = [
   { name: 'Eve', age: 40 },
 ];
 
-// votre code ici .... //
+// Laura
+// function filteredPeopleByInitial(people, initial) {
+//   return people.filter((person) => person.name.charAt(0).toUpperCase() === initial.toUpperCase());
+// }
+// const filteredPeople = filteredPeopleByInitial(people, 'a');
+
+// Emile
+// const filteredPeople = people.filter((person) => person.name.startsWith('A'));
+
+// Adrien
+const specificLetter = 'A';
+const filteredPeople = people.filter((person) => person.name.startsWith(specificLetter));
 
 // résultat attendu :
 console.log(filteredPeople);
